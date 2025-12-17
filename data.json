@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Syeda Nazneen",
+        "Age": 29,
+        "Email": "syedanazneen144@gmail.com",
+        "Pin": 1234,
+        "AccountNo": 1234,
+        "Balance": 0
+    },
+    {
+        "name": "Syeda Nazneen",
+        "Age": 29,
+        "Email": "syedanazneen144@gmail.com",
+        "Pin": 1234,
+        "AccountNo": 1234,
+        "Balance": 0
+    },
+    {
+        "name": "Syeda Nazneen",
+        "Age": 29,
+        "Email": "syedanazneen144@gmail.com",
+        "Pin": 1234,
+        "AccountNo": "$8H6Jz3",
+        "Balance": 0
+    },
+    {
+        "name": "Kareemuddin",
+        "Age": 28,
+        "Email": "kareemuddin12@gmail.com",
+        "Pin": 1236,
+        "AccountNo": "3MV86s#",
+        "Balance": 8000
+    },
+    {
+        "name": "Asma Banu",
+        "Age": 21,
+        "Email": "Asmabanu@gmail.com",
+        "Pin": 1235,
+        "AccountNo": "wJx41@6",
+        "Balance": 8000
+    },
+    {
+        "name": "S Kareemuddin",
+        "Age": 25,
+        "Email": "kareemuddin@gmail.com",
+        "Pin": 4561,
+        "AccountNo": "x29D4#o",
+        "Balance": 0
+    }
+]
