@@ -1,4 +1,3 @@
-# bank.py
 import json
 import random
 import string
@@ -20,8 +19,7 @@ class Bank:
 
     @staticmethod
     def _generate_account():
-        chars = random.choices(string.ascii_letters + string.digits + "!@#$%", k=7)
-        random.shuffle(chars)
+        chars = random.choices(string.ascii_letters + string.digits, k=6)
         return "".join(chars)
 
     @staticmethod
@@ -31,9 +29,14 @@ class Bank:
                 return user
         return None
 
+    # ---------------- METHODS ---------------- #
+
     def create_account(self, name, age, email, pin):
-        if age < 18 or len(str(pin)) != 4:
-            return False, "Age must be 18+ and PIN must be 4 digits"
+        if age < 18:
+            return False, "Age must be 18 or above"
+
+        if len(str(pin)) != 4:
+            return False, "PIN must be 4 digits"
 
         user = {
             "name": name,
@@ -51,7 +54,7 @@ class Bank:
     def deposit(self, acc, pin, amount):
         user = Bank._get_user(acc, pin)
         if not user:
-            return False, "User not found"
+            return False, "Invalid credentials"
 
         user["Balance"] += amount
         Bank._update()
@@ -59,8 +62,11 @@ class Bank:
 
     def withdraw(self, acc, pin, amount):
         user = Bank._get_user(acc, pin)
-        if not user or amount > user["Balance"]:
-            return False, "Invalid operation"
+        if not user:
+            return False, "Invalid credentials"
+
+        if amount > user["Balance"]:
+            return False, "Insufficient balance"
 
         user["Balance"] -= amount
         Bank._update()
@@ -89,6 +95,4 @@ class Bank:
         if not user:
             return False
 
-        Bank.data.remove(user)
-        Bank._update()
-        return True
+        Bank.dat
